@@ -7,8 +7,23 @@ for Arduino, license = MIT
 파일 구조는
 
 > 1. 폴더 개요 
->     > 1.        
+>     > 1.      
 
+~~~c++
+
+#indlue < > 
+
+setup()
+{
+  Serial.begin(9600);
+}
+
+loop()
+{
+  a+= a;
+}
+
+~~~
 
 
   
