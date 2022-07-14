@@ -9,6 +9,9 @@ for Arduino, license = MIT
 >폴더 개요 
   * Sensor
   * Switch
+  * SmartFarm
+     >아두이노코드를 이용한 수경재배에 도움 줄 수 있는 코드를 만들어 보관하는 장소
+     
 
   
 
