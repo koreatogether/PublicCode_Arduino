@@ -34,7 +34,7 @@
 버튼 뗌       Ture (1)       False(0)     False(0)      False(0)
 
 @brief V02 WOKKI 버전
-@link :https://wokwi.com/projects/342571994445775443
+@link :https://wokwi.com/projects/342636834753348178
 
 v2 - 인공지능 copilot 제시한 코드의 흐름도 추가 해보기
    - 카페회워분의 조언에 따라서 딜레이 사용자 정의 함수 내부로 이동
