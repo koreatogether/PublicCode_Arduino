@@ -1,4 +1,4 @@
-// 리팩토링 하지 않는 최종 버전 https://wokwi.com/projects/384152722205360129
+// 리팩토링 하지 않는 #1 버전가상시뮬레이터 주소 :  https://wokwi.com/projects/384152722205360129
 
 /*
 참고할 사이트
@@ -6,11 +6,24 @@ https://rottenstar.tistory.com/35
 https://www.instructables.com/ARDUINO-MENU-DESIGN-With-OLED-UIUSER-INTERFACE/
 https://github.com/alanesq/BasicOLEDMenu
 
-display.display() 사용법 !! 중복되도록하지 말아야 한다.
-안 그럼 먹통 아니면 oled 인식 물가
-
 보완 해야할 사항
 1. 버튼 누를때 숫자간 한 단계씩 이동하는게 아니라 건너뛰는 현상
+
+라이브러리 주소
+1. Adafruit_SSD1306 : https://github.com/adafruit/Adafruit_SSD1306
+2. Adafruit_GFX : https://github.com/adafruit/Adafruit-GFX-Library
+3. ezButton : https://www.arduino.cc/reference/en/libraries/ezbutton/
+
+하드 웨어 배선
+Arduino nano Board          SSD1306_OLED_0.96inch
+    VCC(5V)             <===>            5V
+    GND                 <===>            GND
+    A4                  <===>            SDA
+    A5                  <===>            SCL
+-------------------------------------------------
+
+문서화 필요 영역
+순서도 -> whimsical로 작성해 볼 것 (문서화 필요)
 
 */
 #include <ezButton.h>
@@ -18,10 +31,10 @@ display.display() 사용법 !! 중복되도록하지 말아야 한다.
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#define SCREEN_WIDTH 128    // OLED display width, in pixels
-#define SCREEN_HEIGHT 64    // OLED display height, in pixels
-#define OLED_RESET -1       // Reset pin # (or -1 if sharing Arduino reset pin)
-#define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
+#define SCREEN_WIDTH 128    // OLED 디스플레이 가로폭 픽셀수
+#define SCREEN_HEIGHT 64    // OLED 디스플레이 세로폭 픽셀수
+#define OLED_RESET -1       // 리셋핀 설정 , -1 값은 아두이노 리셋핀과 공유
+#define SCREEN_ADDRESS 0x3C /// 데이타시트와 I2C_SCANNER 예제로 주소를 찾아 적을 것
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 const int SELECT_BTN_PIN = 10;
