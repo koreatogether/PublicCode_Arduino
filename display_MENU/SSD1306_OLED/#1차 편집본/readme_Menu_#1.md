@@ -45,10 +45,10 @@ loop_backToMainMenu -> handleBackToMainMenu
 - menu == 0 대신 isInIdleScreen() 함수을 사용 해볼 수 있음
 - selectBtn.getCount() == 2 대신 isSelectButtonDoublePressed() 함수를 만들 수 있음
 - 복잡한 조건문 에 주석을 추가 할것
-  
-  
 
-## 대략적인 순서도 
+
+
+## 대략적인 순서도
 
 ### setup() 함수
 SSD1306 디스플레이 및 버튼 초기화

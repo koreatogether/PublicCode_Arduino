@@ -23,7 +23,7 @@ Arduino nano Board          SSD1306_OLED_0.96inch
 -------------------------------------------------
 
 문서화 필요 영역
-순서도 -> whimsical로 작성해 볼 것 (문서화 필요)
+순서도 -> whimsical로 작성해 볼 것 (작성완료)
 
 */
 #include <ezButton.h>
